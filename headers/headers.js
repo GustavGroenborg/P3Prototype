@@ -28,9 +28,6 @@ let navBar=`
          <li> <a class="navButtons" href="#"> <i class="fa-solid fa-clipboard"></i>Huskeliste</a></li>
          <li> <a class="navButtons" href="#"> <i class="fa-solid fa-brain"></i>Tætte kunder</a></li>
          <li> <a class="navButtons" href="#"> <i class="fa-solid fa-gear"></i>Indstillinger</a></li>
-         </div>
-         </h1>
-         </div>
       </ul>
    </div>
 </nav>
