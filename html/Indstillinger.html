@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/Indstillinger.css">
+  <title>Indstillinger</title>
+</head>
+
+
+<body>
+  <div>
+    <div class="banner">
+      <h1>Indstillinger</h1>
+    </div>
+
+    <table style="width:60%; font-size:20px;">
+      <tr>
+        <th></th>
+        <th></th>
+      </tr>
+      
+      <tr>
+        <td>Dark mode</td>
+        <td>
+          <label id="darkModeCheckBox" class="switch">
+            <input type="checkbox">
+            <span class="slider round"></span>
+          </label>
+        </td>
+      </tr>
+
+      <tr>
+        <td>Andre indstillinger</td>
+        <td>
+          <label id="setting2" class="switch">
+            <input type="checkbox">
+            <span class="slider round"></span>
+          </label>
+        </td>
+      </tr>
+
+      <tr>
+        <td>Andre indstillinger</td>
+        <td>
+          <label id="setting3" class="switch">
+            <input type="checkbox">
+            <span class="slider round"></span>
+          </label>
+        </td>
+      </tr>
+    </table>
+
+  </div>
+
+
+  <script>
+    let checkbox = document.querySelector("#darkModeCheckBox").childNodes[1];
+    checkbox.addEventListener("change", darkMode);
+
+    function darkMode() {
+      if (checkbox.checked) {
+        document.body.style.backgroundColor = "black";
+        document.body.style.color = "white";
+      }
+      else {
+        document.body.style.backgroundColor = "white";
+        document.body.style.color = "black";
+      }
+    }
+  </script>
+
+
+
+
+
+
+
+  <!-- <label class="switch">
+    <input type="checkbox" checked>
+    <span class="slider round"></span>
+  </label> -->
+</body>
+
+</html>
