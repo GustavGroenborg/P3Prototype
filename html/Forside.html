@@ -38,17 +38,17 @@
     
     <div class = "center">
         <h1>To-dos</h1> 
-        <div class ="centerVertical">
-            <img src = "../img/checkbox.svg" width = "20em"><h3>Opgave 1</h3>
+        <div class ="centerVertical" id = "todo1">
+            <img src = "../img/checkbox.svg" width = "20em" id = "todo1Box" onclick = "hideElem('todo1')"><h3>Opgave 1</h3>
         </div>
-        <div class ="centerVertical">
-            <img src = "../img/checkbox.svg" width = "20em"><h3>Opgave 2</h3>
+        <div class ="centerVertical" id = "todo2">
+            <img src = "../img/checkbox.svg" width = "20em" onclick = "hideElem('todo2')"><h3>Opgave 2</h3>
         </div>
-        <div class ="centerVertical">
-            <img src = "../img/checkbox.svg" width = "20em"><h3>Opgave 3</h3>
+        <div class ="centerVertical" id = "todo3">
+            <img src = "../img/checkbox.svg" width = "20em" id = "todo1Box" onclick = "hideElem('todo3')" role = "button"><h3>Opgave 3</h3>
         </div>
-        <div class ="centerVertical">
-            <img src = "../img/checkbox.svg" width = "20em"><h3>Opgave 4</h3>
+        <div class ="centerVertical" id = "todo4">
+            <img src = "../img/checkbox.svg" width = "20em" id = "todo1Box" onclick = "hideElem('todo4')"><h3>Opgave 4</h3>
         </div>
       
     </div>
@@ -191,8 +191,6 @@
     })
 
 
-
-
     plusButton.addEventListener('click', () =>{
         menu.classList.toggle('hidden')
         menu.classList.toggle('fly')
@@ -201,5 +199,12 @@
         menu.classList.toggle('hidden')
         menu.classList.toggle('fly')
     })
+
+    function hideElem(id){
+        let parent = document.getElementById(id);
+        console.log(parent)
+        parent.remove()
+    
+    }
 </script>
 </html>
