@@ -1,210 +1,224 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel ="stylesheet" href="../css/Forside_styles.css">
-    <link rel = "stylesheet" href = "../headers/headers.css">
-    <title>Dialægt</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/Forside_styles.css">
+  <link rel="stylesheet" href="../headers/headers.css">
+  <title>Dialægt</title>
 </head>
 <header id="headerElement">
-    <nav id="Nav"> 
-       <script src="https://kit.fontawesome.com/9eacabc789.js" crossorigin="anonymous"></script>  
-       <input type="checkbox" id="check">
-       <label for="check">
-          <i class="fas fa-bars" id="btn"></i>
-          <i class="fas fa-times" id="cancel"></i>
-       </label>
-       <div class="sidebar"> 
-          <header> Navigation </header>
-          <ul> 
-             <li> <a class="navButtons" href="../html/Forside.html"> <i class="fa-solid fa-house"></i>Forside</a></li>
-             <li> <a class="navButtons" href="#"> <i class="fa-solid fa-address-card"></i>Kunder</a></li>
-             <li> <a class="navButtons" href="#"> <i class="fa-solid fa-user"></i>Sælger Info</a></li>
-             <li> <a class="navButtons" href="#"> <i class="fa-solid fa-calendar-days"></i>Kalender</a></li>
-             <li> <a class="navButtons" href="#"> <i class="fa-solid fa-envelope"></i>Mail</a></li>
-             <li> <a class="navButtons" href="#"> <i class="fa-solid fa-clipboard"></i>Huskeliste</a></li>
-             <li> <a class="navButtons" href="#"> <i class="fa-solid fa-brain"></i>Tætte kunder</a></li>
-             <li> <a class="navButtons" href="../html/Indstillinger.html"> <i class="fa-solid fa-gear"></i>Indstillinger</a></li>
-             </div>
-             </h1>
-             </div>
-          </ul>
-       </div>
-    </nav>
-    </header>
-<body>
-    
-    <div class = "center">
-        <h1>To-dos</h1> 
-        <div class ="centerVertical" id = "todo1">
-            <img src = "../img/checkbox.svg" width = "20em" id = "todo1Box" onclick = "hideElem('todo1')"><h3>Opgave 1</h3>
-        </div>
-        <div class ="centerVertical" id = "todo2">
-            <img src = "../img/checkbox.svg" width = "20em" onclick = "hideElem('todo2')"><h3>Opgave 2</h3>
-        </div>
-        <div class ="centerVertical" id = "todo3">
-            <img src = "../img/checkbox.svg" width = "20em" id = "todo1Box" onclick = "hideElem('todo3')" role = "button"><h3>Opgave 3</h3>
-        </div>
-        <div class ="centerVertical" id = "todo4">
-            <img src = "../img/checkbox.svg" width = "20em" id = "todo1Box" onclick = "hideElem('todo4')"><h3>Opgave 4</h3>
-        </div>
-      
+  <nav id="Nav">
+    <script src="https://kit.fontawesome.com/9eacabc789.js" crossorigin="anonymous"></script>
+    <input type="checkbox" id="check">
+    <label for="check">
+      <i class="fas fa-bars" id="btn"></i>
+      <i class="fas fa-times" id="cancel"></i>
+    </label>
+    <div class="sidebar">
+      <header> Navigation </header>
+      <ul>
+        <li> <a class="navButtons" href="../html/Forside.html"> <i class="fa-solid fa-house"></i>Forside</a></li>
+        <li> <a class="navButtons" href="#"> <i class="fa-solid fa-address-card"></i>Kunder</a></li>
+        <li> <a class="navButtons" href="#"> <i class="fa-solid fa-user"></i>Sælger Info</a></li>
+        <li> <a class="navButtons" href="#"> <i class="fa-solid fa-calendar-days"></i>Kalender</a></li>
+        <li> <a class="navButtons" href="#"> <i class="fa-solid fa-envelope"></i>Mail</a></li>
+        <li> <a class="navButtons" href="#"> <i class="fa-solid fa-clipboard"></i>Huskeliste</a></li>
+        <li> <a class="navButtons" href="#"> <i class="fa-solid fa-brain"></i>Tætte kunder</a></li>
+        <li> <a class="navButtons" href="../html/Indstillinger.html"> <i class="fa-solid fa-gear"></i>Indstillinger</a>
+        </li>
     </div>
-    <div class ="center" width = "100%">
-    <h1>Dagens Kunder</h1>
-    <div class = "break"></div>
-    <div class = "centerVertical element">
+    </h1>
+    </div>
+    </ul>
+    </div>
+  </nav>
+</header>
 
-        <img id ="btn1" class = "toggleOut"src = "../img/right-arrow.png" width="50em"><h1>Magasin</h1>
+<body>
+
+  <div class="center">
+    <h1>To-dos</h1>
+    <div class="centerVertical" id="todo1">
+      <img src="../img/checkbox.svg" width="20em" id="todo1Box" onclick="hideElem('todo1')">
+      <h3>Opgave 1</h3>
     </div>
-    <div class="break"></div>  
-    <div id ="hideText" class="hidden fly">
-        <div class ="center fly">
-        <h1 class = "fly">Noter</h1>
+    <div class="centerVertical" id="todo2">
+      <img src="../img/checkbox.svg" width="20em" onclick="hideElem('todo2')">
+      <h3>Opgave 2</h3>
+    </div>
+    <div class="centerVertical" id="todo3">
+      <img src="../img/checkbox.svg" width="20em" id="todo1Box" onclick="hideElem('todo3')" role="button">
+      <h3>Opgave 3</h3>
+    </div>
+    <div class="centerVertical" id="todo4">
+      <img src="../img/checkbox.svg" width="20em" id="todo1Box" onclick="hideElem('todo4')">
+      <h3>Opgave 4</h3>
+    </div>
+
+  </div>
+  <div class="center" width="100%">
+    <h1>Dagens Kunder</h1>
+    <div class="break"></div>
+    <div class="centerVertical element">
+
+      <img id="btn1" class="toggleOut" src="../img/right-arrow.png" width="50em">
+      <h1>Magasin</h1>
+    </div>
+    <div class="break"></div>
+    <div id="hideText" class="hidden fly">
+      <div class="center fly">
+        <h1 class="fly">Noter</h1>
         <ul>
-            <li>Gå ind af dør 3</li>
-            <li>Husk plakater med fisk</li>
-            <li>Parkering er gratis</li>
+          <li>Gå ind af dør 3</li>
+          <li>Husk plakater med fisk</li>
+          <li>Parkering er gratis</li>
         </ul>
         <button>Opret ordre</button>
         <button>Kommunikation med kunde</button>
+      </div>
     </div>
+    <div class="break"> </div>
+    <div class="centerVertical element">
+      <img id="btn2" class="toggleOut" src="../img/right-arrow.png" width="50em">
+      <h1>Kop & Kande</h1>
     </div>
-    <div class ="break"> </div>
-    <div class = "centerVertical element">   
-        <img id ="btn2" class = "toggleOut"src = "../img/right-arrow.png" width="50em"><h1>Kop & Kande</h1>
-    </div>
-    <div class ="break"> </div>
-    <div id ="hideElem2" class="hidden fly">
-            <h1 class = "fly">Noter</h1>
+    <div class="break"> </div>
+    <div id="hideElem2" class="hidden fly">
+      <h1 class="fly">Noter</h1>
 
-            <button>Opret ordre</button>
-            <div class ="break"> </div>
-            <button>Kommunikation med kunde</button>
+      <button>Opret ordre</button>
+      <div class="break"> </div>
+      <button>Kommunikation med kunde</button>
     </div>
-    <div class = "centerVertical element">   
-        <img id ="btn3" class = "toggleOut"src = "../img/right-arrow.png" width="50em"><h1>Spar</h1>
+    <div class="centerVertical element">
+      <img id="btn3" class="toggleOut" src="../img/right-arrow.png" width="50em">
+      <h1>Spar</h1>
     </div>
-    <div class ="break"> </div>
-    <div id ="hideElem3" class="hidden fly">
-            <h1 class = "fly">Noter</h1>
+    <div class="break"> </div>
+    <div id="hideElem3" class="hidden fly">
+      <h1 class="fly">Noter</h1>
 
-            <button>Opret ordre</button>
-            <div class ="break"> </div>
-            <button>Kommunikation med kunde</button>
+      <button>Opret ordre</button>
+      <div class="break"> </div>
+      <button>Kommunikation med kunde</button>
     </div>
-    <div class = "centerVertical element">   
-        <img id ="btn4" class = "toggleOut"src = "../img/right-arrow.png" width="50em"><h1>Salling</h1>
+    <div class="centerVertical element">
+      <img id="btn4" class="toggleOut" src="../img/right-arrow.png" width="50em">
+      <h1>Salling</h1>
     </div>
-    <div class ="break"> </div>
-    <div id ="hideElem4" class="hidden fly">
-            <h1 class = "fly">Noter</h1>
+    <div class="break"> </div>
+    <div id="hideElem4" class="hidden fly">
+      <h1 class="fly">Noter</h1>
 
-            <button>Opret ordre</button>
-            <div class ="break"> </div>
-            <button>Kommunikation med kunde</button>
+      <button>Opret ordre</button>
+      <div class="break"> </div>
+      <button>Kommunikation med kunde</button>
     </div>
-    <div class = "centerVertical element">   
-        <img id ="btn5" class = "toggleOut"src = "../img/right-arrow.png" width="50em"><h1>Fakta</h1>
+    <div class="centerVertical element">
+      <img id="btn5" class="toggleOut" src="../img/right-arrow.png" width="50em">
+      <h1>Fakta</h1>
     </div>
-    <div class ="break"> </div>
-    <div id ="hideElem5" class="hidden fly">
-            <h1 class = "fly">Noter</h1>
+    <div class="break"> </div>
+    <div id="hideElem5" class="hidden fly">
+      <h1 class="fly">Noter</h1>
 
-            <button>Opret ordre</button>
-            <div class ="break"> </div>
-            <button>Kommunikation med kunde</button>
+      <button>Opret ordre</button>
+      <div class="break"> </div>
+      <button>Kommunikation med kunde</button>
     </div>
-</div>
-<div>
-    <img src ="../img/plus.svg" width ="80vw" class ="abs" id = "plusMaster">        
-</div>
-<div class ="abs hidden majestic" id="popup">
-    <img src = "../img/Close.svg" id = "close" width = "50vw">
-    <h1><a class ="noFormat" href = "">Salg</a></h1>
+  </div>
+  <div>
+    <img src="../img/plus.svg" width="80vw" class="abs" id="plusMaster">
+  </div>
+  <div class="abs hidden majestic" id="popup">
+    <img src="../img/Close.svg" id="close" width="50vw">
+    <h1><a class="noFormat" href="">Salg</a></h1>
     <hr>
-    <h1><a class ="noFormat" href = "">Kunde</a><h1>
-    <hr>
-   <h1><a class ="noFormat" href = "">Note</a></h1>
-</div>
+    <h1><a class="noFormat" href="">Kunde</a>
+      <h1>
+        <hr>
+        <h1><a class="noFormat" href="">Note</a></h1>
+  </div>
 </body>
 <script>
-    //Magasin
-    const hide = document.getElementById('hideText')
-    const btn = document.getElementById('btn1')
-    //Kop og kande
-    const hide2 = document.getElementById('hideElem2')
-    const btn2 = document.getElementById('btn2')
-    
-    //spar
-    const hide3 = document.getElementById('hideElem3')
-    const btn3 = document.getElementById('btn3')
+  //Magasin
+  const hide = document.getElementById('hideText')
+  const btn = document.getElementById('btn1')
+  //Kop og kande
+  const hide2 = document.getElementById('hideElem2')
+  const btn2 = document.getElementById('btn2')
 
-       //spar
-       const hide4 = document.getElementById('hideElem4')
-    const btn4 = document.getElementById('btn4')
+  //spar
+  const hide3 = document.getElementById('hideElem3')
+  const btn3 = document.getElementById('btn3')
 
-    //spar
-    const hide5 = document.getElementById('hideElem5')
-    const btn5 = document.getElementById('btn5')
+  //spar
+  const hide4 = document.getElementById('hideElem4')
+  const btn4 = document.getElementById('btn4')
 
-
-
-    //menu i bunden
-    const plusButton = document.getElementById('plusMaster')
-    const menu = document.getElementById('popup')
-    const closeMenu = document.getElementById('close')
-
-    btn.addEventListener("click", () =>{
-        hide.classList.toggle('hidden')
-        hide.classList.toggle('fly')
-        
-        btn.classList.toggle('toggleOut')
-        btn.classList.toggle('toggleIn')
-    })
-    btn3.addEventListener("click", () =>{
-        hide3.classList.toggle('hidden')
-        hide3.classList.toggle('fly')
-        
-        btn3.classList.toggle('toggleOut')
-        btn3.classList.toggle('toggleIn')
-    })
-    btn2.addEventListener("click", () =>{
-        hide2.classList.toggle('hidden')
-        hide2.classList.toggle('fly')
-        btn2.classList.toggle('toggleOut')
-        btn2.classList.toggle('toggleIn')
-    })
-    btn4.addEventListener("click", () =>{
-        hide4.classList.toggle('hidden')
-        hide4.classList.toggle('fly')
-        btn4.classList.toggle('toggleOut')
-        btn4.classList.toggle('toggleIn')
-    })
-    btn5.addEventListener("click", () =>{
-        hide5.classList.toggle('hidden')
-        hide5.classList.toggle('fly')
-        btn5.classList.toggle('toggleOut')
-        btn5.classList.toggle('toggleIn')
-    })
+  //spar
+  const hide5 = document.getElementById('hideElem5')
+  const btn5 = document.getElementById('btn5')
 
 
-    plusButton.addEventListener('click', () =>{
-        menu.classList.toggle('hidden')
-        menu.classList.toggle('fly')
-    })
-    closeMenu.addEventListener('click',() => {
-        menu.classList.toggle('hidden')
-        menu.classList.toggle('fly')
-    })
 
-    function hideElem(id){
-        let parent = document.getElementById(id);
-        console.log(parent)
-        parent.remove()
-    
-    }
+  //menu i bunden
+  const plusButton = document.getElementById('plusMaster')
+  const menu = document.getElementById('popup')
+  const closeMenu = document.getElementById('close')
+
+  btn.addEventListener("click", () => {
+    hide.classList.toggle('hidden')
+    hide.classList.toggle('fly')
+
+    btn.classList.toggle('toggleOut')
+    btn.classList.toggle('toggleIn')
+  })
+  btn3.addEventListener("click", () => {
+    hide3.classList.toggle('hidden')
+    hide3.classList.toggle('fly')
+
+    btn3.classList.toggle('toggleOut')
+    btn3.classList.toggle('toggleIn')
+  })
+  btn2.addEventListener("click", () => {
+    hide2.classList.toggle('hidden')
+    hide2.classList.toggle('fly')
+    btn2.classList.toggle('toggleOut')
+    btn2.classList.toggle('toggleIn')
+  })
+  btn4.addEventListener("click", () => {
+    hide4.classList.toggle('hidden')
+    hide4.classList.toggle('fly')
+    btn4.classList.toggle('toggleOut')
+    btn4.classList.toggle('toggleIn')
+  })
+  btn5.addEventListener("click", () => {
+    hide5.classList.toggle('hidden')
+    hide5.classList.toggle('fly')
+    btn5.classList.toggle('toggleOut')
+    btn5.classList.toggle('toggleIn')
+  })
+
+
+  plusButton.addEventListener('click', () => {
+    menu.classList.toggle('hidden')
+    menu.classList.toggle('fly')
+  })
+  closeMenu.addEventListener('click', () => {
+    menu.classList.toggle('hidden')
+    menu.classList.toggle('fly')
+  })
+
+  function hideElem(id) {
+    let parent = document.getElementById(id);
+    console.log(parent)
+    parent.remove()
+
+  }
 </script>
+
 </html>
