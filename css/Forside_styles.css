@@ -1,0 +1,84 @@
+.hidden{
+    display :none;
+}
+
+
+.fly{
+    animation: flyAnimation 0.1s ease-in forwards;
+}
+@keyframes flyAnimation {
+    from{
+        transform : translate(10%,0)
+    }
+    to{
+        transform: translate(0,0);
+    }
+}
+.toggleIn{
+    animation: toggleInA 0.2s forwards;
+}
+@keyframes toggleInA {
+    from{
+        transform:rotate(0deg)
+    }
+    to{
+        transform:rotate(90deg)
+    }
+}
+.toggleOut{
+    animation: toggleOutA 0.2s forwards;
+}
+@keyframes toggleOutA {
+    from{
+        transform:rotate(90deg);
+    }
+    to{
+        transform:rotate(0deg);
+    }
+}   
+.centerVertical {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    justify-self: start;
+  }
+  .center {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+  }
+  .break {
+    flex-basis: 100%;
+    height: 0;
+  }
+  .element{
+    width: 250px;
+  }
+  .card {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+  }
+  
+  /* On mouse-over, add a deeper shadow */
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  .abs{
+    position:fixed;
+    right : 25px;
+    bottom: 25px;
+  }
+  .majestic{
+    background-color: rgb(212, 212, 212);
+  }
+  .noFormat:link { text-decoration: none; color:black }
+
+  .noFormat:visited { text-decoration: none; color:black}
+  
+  .noFormat:hover { text-decoration: none; }
+  
+  .noFormat:active { text-decoration: none; }
