@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+div {
+  margin-bottom: 15px;
+  padding: 4px 12px;
+}
+
+.Noter {
+  background-color: #ffdddd;
+  border-left: 6px solid #f44336;
+}
+
+</style>
+</head>
+<body>
+
+  
+
+<h2>Notes</h2>
+<div class="Noter">
+<title>Creating Editable Elements in HTML5</title>
+</head>
+<body>
+<button id="noteButton" type="button">Tilføj ny note</button>
+
+<script>
+   
+
+  function createNewNote(event) {
+    let newNote = document.createElement("div");
+    newNote.Id = "Note";
+    newNote.innerHTML = `
+    <h1 contentEditable="true"> Notens Navn </h1>
+    <p contentEditable="true"> Notens Indhold </p>`;
+    document.body.appendChild(newNote);
+
+  }
+  
+  document.getElementById("noteButton").addEventListener("click", createNewNote);
+
+  
+
+</script>
+
+
+</body>
+</html>
+
