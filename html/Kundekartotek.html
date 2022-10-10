@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/Kundekartotek.css">
+  <link rel="stylesheet" href="../headers/headers.css">
+  <title>Dialægt</title>
+
+</head>
+
+<body>
+
+
+
+  <h1 id="Titlen"> Kundekartotek </h1>
+  <div id="KundeWrapper">
+    <div class="KundeDiv" id="Kunde">
+        <img id="Kunde1" class="EnkeltKunde" src="../img/MagasinLogo.png" alt="MagasinLogo"> 
+      </div>
+      <div id="KundeDiv">
+        <img id="Kunde2" class="EnkeltKunde"src="../img/BilkaLogo.png" alt="MagasinLogo">
+      </div>
+      <div class="KundeDiv" id="Kunde">
+        <img id="Kunde1" class="EnkeltKunde" src="../img/MagasinLogo.png" alt="MagasinLogo"> 
+      </div>
+      <div id="KundeDiv">
+        <img id="Kunde2" class="EnkeltKunde"src="../img/BilkaLogo.png" alt="MagasinLogo"> 
+      </div>
+    </div>
+  </div>
+
+  <button id="CreateNewButton"> Tilføj ny kunde </button>
+
+
+  <div class="modal_container hidden" id="modal_container">
+    <div class="modal">
+        <div id="iFrameDiv">
+        <iframe src="https://forms.monday.com/forms/embed/eeed5c6d31ce6a028495ef8ea6f8e585?r=use1" width="400" height="700" style="border: 0; box-shadow: 5px 5px 56px 0px rgba(0,0,0,0.25);"></iframe>
+        </div>
+        <br> <br>
+      <button id="close" style="font-size: 3vh; background-color: red";>Luk</button>
+    </div>
+  </div>
+
+  <script>
+    const open = document.getElementById('CreateNewButton');
+    const modal_container = document.getElementById('modal_container');
+    const close = document.getElementById('close');
+
+    open.addEventListener('click', () => {
+      modal_container.classList.toggle('hidden');
+    });
+
+    close.addEventListener('click', () => {
+      modal_container.classList.toggle('hidden');
+    });
+
+
+
+  </script>
+
+
+</body>
+
+</html>
