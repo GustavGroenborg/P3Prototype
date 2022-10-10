@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link ref = "stylesheet" src = "../css/Forside_styles.css">
+    <title>Opret Ordre</title>
+</head>
+<body>
+    <h1>Magasin</h1>
+    <h1>foo@bar.com</h1>
+    <div class = "">
+    <hr>
+    <form>  
+            <h1>skriv EAN nummer eller scan stregkode</h1>
+            <img src = "../img/camera.svg" width = "70vh">
+            <div class ="break"></div>
+            <label for = "EAN">EAN</label>
+            <input id = "EAN"></input>
+            </div>
+            <label for = "antal">antal</label>
+            <input id = "antal"></input>
+            <div id = "products"></div>
+            <button id = "tilføjProdukt">tilføj produkt</button>
+            <hr>
+            <label for="deliveryDate">Leverings dato</label>
+            <input id = "deliveryDate" type = "date">
+            <hr>
+            <button type = "submit">placer ordre</button>
+    </form>
+   <button> <a href = "../html/Forside.html">tilbage</button>
+</body>
+<script>
+    const productsElem = document.getElementById("products")
+    const addProductButton = document.getElementById("tilføjProdukt");
+    const EAN = document.getElementById('EAN')
+    const antal = document.getElementById('antal')
+    addProductButton.addEventListener('click', (e) => {
+        e.preventDefault();
+        productsElem.appendChild(document.createTextNode(`${EAN.value} - ${antal.value} stk`))
+        var div = document.createElement('div')
+        div.classList.add('break')
+        productsElem.appendChild(div)
+    })
+
+</script>
+</html>
