@@ -37,23 +37,107 @@
 
 <body>
 
-<div>
-  <div class="banner">
-    <h1>Medarbejder Information</h1>
+  <div>
+    <div class="banner">
+      <h1>Medarbejder Information</h1>
+    </div>
+
+    <div id="salesTeam">
+      <h2>Sales Team</h2>
+      <div class="responsive">
+        <div class="gallery">
+          <img src="../img/Medarbejderinfo/Picture1 Edit.jpg" alt="Person 1">
+          <div class="desc">Johanne Sørensen</div>
+        </div>
+      </div>
+
+      <div class="responsive">
+        <div class="gallery">
+          <img src="../img/Medarbejderinfo/Picture2 Edit.jpeg" alt="Person 1">
+          <div class="desc">Louise Frederiksen</div>
+        </div>
+      </div>
+
+      <div class="responsive">
+        <div class="gallery">
+          <img src="../img/Medarbejderinfo/Picture3 Edit.jpg" alt="Person 1">
+          <div class="desc">Anders Davidsen</div>
+        </div>
+      </div>
+
+      <div class="responsive">
+        <div class="gallery">
+          <img src="../img/Medarbejderinfo/Picture4 Edit.jpg" alt="Person 1">
+          <div class="desc">Henriette Lauritsen</div>
+        </div>
+      </div>
+
+    </div>
+
+    <div id="supportTeam">
+      <h2>Support Team</h2>
+      <div class="responsive">
+        <div class="gallery">
+          <img src="../img/Medarbejderinfo/Picture1 Edit.jpg" alt="Person 1">
+          <div class="desc">Johanne Sørensen</div>
+        </div>
+      </div>
+
+      <div class="responsive">
+        <div class="gallery">
+          <img src="../img/Medarbejderinfo/Picture2 Edit.jpeg" alt="Person 1">
+          <div class="desc">Louise Frederiksen</div>
+        </div>
+      </div>
+
+      <div class="responsive">
+        <div class="gallery">
+          <img src="../img/Medarbejderinfo/Picture3 Edit.jpg" alt="Person 1">
+          <div class="desc">Anders Davidsen</div>
+        </div>
+      </div>
+
+      <div class="responsive">
+        <div class="gallery">
+          <img src="../img/Medarbejderinfo/Picture4 Edit.jpg" alt="Person 1">
+          <div class="desc">Henriette Lauritsen</div>
+        </div>
+      </div>
+
+    </div>
+
+    <script>
+      let salesTeam = document.querySelector("#salesTeam");
+      let supportTeam = document.querySelector("#supportTeam");
+
+      addPictures(salesTeam);
+      addPictures(supportTeam);
+
+      function addPictures(group) {
+        for (let i = 0; i < 4; i++) {
+          let responsive = document.createElement("div");
+          responsive.classList.add("responsive");
+
+          let gallery = document.createElement("div");
+          gallery.classList.add("gallery");
+
+          let img = document.createElement("img");
+          img.src = "..//img/Medarbejderinfo/None.jpg"
+          img.alt = "Blank picture"
+
+          let desc = document.createElement("div");
+          desc.classList.add("desc");
+          desc.textContent = "Blank person";
+
+          gallery.appendChild(img);
+          gallery.appendChild(desc);
+          responsive.appendChild(gallery);
+          group.appendChild(responsive);
+        }
+      }
+      </script>
+
   </div>
-  
-  <table>
-    <thead>Sales Team</thead>
-    <tr>
-      <th>Sales Teams</th>
-      <td>Hallo</td>
-      <td>Hallo</td>
-    </tr>
-  </table>
-
-
-
-</div>
 </body>
 
 </html>
