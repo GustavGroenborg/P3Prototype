@@ -1,5 +1,6 @@
 import { v4 as uuidv4 } from 'https://jspm.dev/uuid';
 import { UserLocation } from './UserLocation.js';
+import { Waypoint } from './Waypoint.js';
 
 class LeafletMap {
 
@@ -110,13 +111,25 @@ class LeafletMap {
     }
 
 
+    /**
+     * Adds a latlng object to the called instance of the leaflet map.
+     * The input is not type validated. This Methods utilises the Waypoint class.
+     * @param latlng: latlng object {lat: lng:}
+     */
+    #addLatlngToMap(latlng) {
+        let leafletFeature = Waypoint.leafletCircleMarker(latlng);
+
+        leafletFeature.addTo(this.map);
+    }
+
+
     /******************
      * Public Methods *
      ******************/
 
     /**
      * Sets the map view to the current user location. If the user location is not available, the map view is set
-     * to a standard view of lat: 56.20746, lng: 10.48096, with a zoom level of 7.
+     * to a standard view of lat: 56.20746, lng: 10.48096, with a zoom level of 14.
      * Also imports the user location on the map as a GeoJson object.
      */
     async setViewToUsrLoc() {
@@ -126,18 +139,20 @@ class LeafletMap {
                 this.usrLoc.lng = curLoc.lng;
 
                 this.map.setView([this.usrLoc.lat, this.usrLoc.lng], 14);
+                this.#addLatlngToMap(curLoc);
                 console.log(curLoc);
             });
 
     }
 
 
-    addUsrToMap() {
-        if (this.usrLoc.lat !== null && this.usrLoc.lng !== null) {
-
-        }
+    /**
+     * Adds the last stored user location to the called instance of the Leaflet map.
+     * This method relies indirectly on the Waypoint class, through its' use of the private method, "#addLatlngToMap."
+     */
+    addUsrLocToMap() {
+        this.#addLatlngToMap(this.usrLoc);
     }
-
 }
 
 export { LeafletMap };

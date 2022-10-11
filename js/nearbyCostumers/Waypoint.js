@@ -32,11 +32,11 @@ class Waypoint {
             pointToLayer: function (feature, latlng) {
                 let marker = L.circleMarker(latlng, {
                     radius: 7,
-                    fillColor: "#ef0a0a",
-                    color: "#cc0000",
+                    fillColor: "#0078ff",
+                    color: "#0d5bb2",
                     weight: 3,
                     opacity: 1,
-                    fillOpacity: 0.8,
+                    fillOpacity: 0.8
 
                 });
 
@@ -50,19 +50,19 @@ class Waypoint {
      * Takes a latlng object and returns a GeoJSON object.
      * No of the inputs are validated.
      * @param latLng: latlng object.
-     * @param type: GeoJSON type, if not specified will be, "Feature."
      * @param name: GeoJSON name, if not specified will be, "Waypoint."
+     * @param geoJSONType: GeoJSON type, if not specified will be, "Feature."
      * @returns {{geometry: {coordinates: (number|*)[], type: string}, type: string, properties: {name: string}}}: A GeoJSON object.
      */
-    #latLngToGeoJSON(latLng, type = 'Feature', name = 'Waypoint') {
+    static #latLngToGeoJSON(latLng, name = 'Waypoint', geoJSONType = 'Feature') {
        return {
-           'type': type,
+           'type': geoJSONType,
            'properties': {
                'name': name
            },
            'geometry': {
                'type': 'Point',
-               'coordinates': [latlng.lng, latlng.lat]
+               'coordinates': [latLng.lng, latLng.lat]
            }
        };
     }
@@ -74,7 +74,21 @@ class Waypoint {
      * @param latlng: latlng object {lat: lng:}
      */
     static leafletCircleMarker(latlng) {
-
+        return L.geoJSON(
+            this.#latLngToGeoJSON(latlng, 'CircleMarker'),
+            {
+                pointToLayer: function (feature, latlng) {
+                    return L.circleMarker(latlng, {
+                        radius: 7,
+                        fillColor: "#0078ff",
+                        color: "#0d5bb2",
+                        weight: 3,
+                        opacity: 1,
+                        fillOpacity: 0.8
+                    })
+                }
+            }
+        );
     }
 }
 
