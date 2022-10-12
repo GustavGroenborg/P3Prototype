@@ -42,7 +42,8 @@
     <hr>
     <form>  
             <h1>skriv EAN nummer eller scan stregkode</h1>
-            <img src = "../img/camera.svg" width = "70vh">
+            <img src = "../img/camera.svg" width = "70vh" id = "cameraInput">
+            <div id = "qrElem"></div>
             <div class ="break"></div>
             <label for = "EAN">EAN</label>
             <input id = "EAN"></input>
@@ -59,7 +60,9 @@
     </form>
    <button> <a href = "../html/Forside.html">tilbage</button>
 </body>
+<script src="https://unpkg.com/html5-qrcode@2.0.9/dist/html5-qrcode.min.js"></script>
 <script>
+
     const productsElem = document.getElementById("products")
     const addProductButton = document.getElementById("tilføjProdukt");
     const EAN = document.getElementById('EAN')
@@ -72,5 +75,33 @@
         productsElem.appendChild(div)
     })
 
+    //qr functionality
+    const scanBtn = document.getElementById("cameraInput")
+    const inputField = document.getElementById("EAN")
+    var Qr = new Html5Qrcode("qrElem")
+    scanBtn.addEventListener('click',() => {
+    if (navigator.mediaDevices.getUserMedia) {
+        navigator.mediaDevices.getUserMedia({ video: true })
+        .then(function (stream) {
+            var obj = {}
+            obj.qrbox = {width : 500, height : 500}
+            Html5Qrcode.getCameras().then((e) => 
+            {
+                console.log(e)
+                Qr.start(e[0].id, obj,
+             (succ) => {
+               inputField.value = succ
+               console.log(succ)
+               Qr.stop()
+             }, 
+             (err) => {console.log(err)})
+        })
+            .catch(e => console.log(e))
+    })
+    .catch(function (err) {
+        console.log(err)
+    });
+   
+}})
 </script>
 </html>
