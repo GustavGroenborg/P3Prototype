@@ -1,107 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link ref = "stylesheet" src = "../css/Forside_styles.css">
-    <link ref = "stylesheet" src = "../headers/headers.css">
-    <title>Opret Ordre</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link ref="stylesheet" src="../css/Forside_styles.css">
+  <link ref="stylesheet" src="/headers/headers.css">
+  <title>Opret Ordre</title>
 </head>
-<!-- Navigation Menu Start -->
-<header id="headerElement">
-  <nav id="Nav">
-    <script src="https://kit.fontawesome.com/9eacabc789.js" crossorigin="anonymous"></script>
-    <input type="checkbox" id="check">
-    <label for="check">
-      <i class="fas fa-bars" id="btn"></i>
-      <i class="fas fa-times" id="cancel"></i>
-    </label>
-    <div class="sidebar">
-      <header> Navigation </header>
-      <ul>
-        <li> <a class="navButtons" href="../html/Forside.html"> <i class="fa-solid fa-house"></i>Forside</a></li>
-        <li> <a class="navButtons" href="./Kundekartotek.html"> <i
-              class="fa-solid fa-address-card"></i>Kundekartotek</a></li>
-        <li> <a class="navButtons" href="./SalesmanInfo.html"> <i class="fa-solid fa-user"></i>Medarbejder Info</a></li>
-        <li> <a class="navButtons" href="../html/Kalender.html"> <i class="fa-solid fa-calendar-days"></i>Kalender</a></li>
-        <li> <a class="navButtons" href="#"> <i class="fa-solid fa-envelope"></i>(Ikke lavet) Mail</a></li>
-        <li> <a class="navButtons" href="#"> <i class="fa-solid fa-clipboard"></i>(Ikke lavet) Huskeliste</a></li>
-        <li> <a class="navButtons" href="#"> <i class="fa-solid fa-brain"></i>(Ikke forbundet) Tætte kunder</a></li>
-        <li> <a class="navButtons" href="../html/Indstillinger.html"> <i class="fa-solid fa-gear"></i>Indstillinger</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
-</header>
-<!-- Navigation Menu End -->
+
 <body>
-    <h1>Magasin</h1>
-    <h1>foo@bar.com</h1>
-    <div class = "">
+  <!-- Navigation Menu Start -->
+  <header id="headerElement">
+    <nav id="Nav">
+      <script src="https://kit.fontawesome.com/9eacabc789.js" crossorigin="anonymous"></script>
+      <input type="checkbox" id="check">
+      <label for="check">
+        <i class="fas fa-bars" id="btn"></i>
+        <i class="fas fa-times" id="cancel"></i>
+      </label>
+      <div class="sidebar">
+        <header> Navigation </header>
+        <ul>
+          <li> <a class="navButtons" href="../html/Forside.html"> <i class="fa-solid fa-house"></i>Forside</a></li>
+          <li> <a class="navButtons" href="./Kundekartotek.html"> <i
+                class="fa-solid fa-address-card"></i>Kundekartotek</a></li>
+          <li> <a class="navButtons" href="./SalesmanInfo.html"> <i class="fa-solid fa-user"></i>Medarbejder Info</a>
+          </li>
+          <li> <a class="navButtons" href="../html/Kalender.html"> <i class="fa-solid fa-calendar-days"></i>Kalender</a>
+          </li>
+          <li> <a class="navButtons" href="#"> <i class="fa-solid fa-brain"></i>(Ikke forbundet) Tætte kunder</a></li>
+          <li> <a class="navButtons" href="../html/Indstillinger.html"> <i
+                class="fa-solid fa-gear"></i>Indstillinger</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <!-- Navigation Menu End -->
+
+  <h1>Magasin</h1>
+  <h1>foo@bar.com</h1>
+  <div class="">
     <hr>
-    <form>  
-            <h1>skriv EAN nummer eller scan stregkode</h1>
-            <img src = "../img/camera.svg" width = "70vh" id = "cameraInput">
-            <div id = "qrElem"></div>
-            <div class ="break"></div>
-            <label for = "EAN">EAN</label>
-            <input id = "EAN"></input>
-            </div>
-            <label for = "antal">antal</label>
-            <input id = "antal"></input>
-            <div id = "products"></div>
-            <button id = "tilføjProdukt">tilføj produkt</button>
-            <hr>
-            <label for="deliveryDate">Leverings dato</label>
-            <input id = "deliveryDate" type = "date">
-            <hr>
-            <button type = "submit">placer ordre</button>
-    </form>
-   <button> <a href = "../html/Forside.html">tilbage</button>
+    <form>
+      <h1>Skriv EAN nummer eller scan stregkode</h1>
+      <img src="../img/camera.svg" width="70vh" id="cameraInput">
+      <div id="qrElem"></div>
+      <div class="break"></div>
+      <label for="EAN">EAN</label>
+      <input id="EAN"></input>
+  </div>
+  <label for="antal">Antal</label>
+  <input id="antal"></input>
+  <div id="products"></div>
+  <button id="tilføjProdukt">Tilføj Produkt</button>
+  <hr>
+  <label for="deliveryDate">Leverings Dato</label>
+  <input id="deliveryDate" type="date">
+  <hr>
+  <button type="submit">Placer Ordre</button>
+  </form>
+  <button> <a href="../html/Forside.html">tilbage</button>
 </body>
 <script src="https://unpkg.com/html5-qrcode@2.0.9/dist/html5-qrcode.min.js"></script>
 <script>
 
-    const productsElem = document.getElementById("products")
-    const addProductButton = document.getElementById("tilføjProdukt");
-    const EAN = document.getElementById('EAN')
-    const antal = document.getElementById('antal')
-    addProductButton.addEventListener('click', (e) => {
-        e.preventDefault();
-        productsElem.appendChild(document.createTextNode(`${EAN.value} - ${antal.value} stk`))
-        var div = document.createElement('div')
-        div.classList.add('break')
-        productsElem.appendChild(div)
-    })
+  const productsElem = document.getElementById("products")
+  const addProductButton = document.getElementById("tilføjProdukt");
+  const EAN = document.getElementById('EAN')
+  const antal = document.getElementById('antal')
+  addProductButton.addEventListener('click', (e) => {
+    e.preventDefault();
+    productsElem.appendChild(document.createTextNode(`${EAN.value} - ${antal.value} stk`))
+    EAN.value = ""
+    antal.value = ""
+    var div = document.createElement('div')
+    div.classList.add('break')
+    productsElem.appendChild(div)
+  })
 
-    //qr functionality
-    const scanBtn = document.getElementById("cameraInput")
-    const inputField = document.getElementById("EAN")
-    var Qr = new Html5Qrcode("qrElem")
-    scanBtn.addEventListener('click',() => {
+  //qr functionality
+  const scanBtn = document.getElementById("cameraInput")
+  const inputField = document.getElementById("EAN")
+  var Qr = new Html5Qrcode("qrElem")
+  scanBtn.addEventListener('click', () => {
     if (navigator.mediaDevices.getUserMedia) {
-        navigator.mediaDevices.getUserMedia({ video: true })
+      navigator.mediaDevices.getUserMedia({ video: true })
         .then(function (stream) {
-            var obj = {}
-            obj.qrbox = {width : 500, height : 500}
-            Html5Qrcode.getCameras().then((e) => 
-            {
-                console.log(e)
-                Qr.start(e[0].id, obj,
-             (succ) => {
-               inputField.value = succ
-               console.log(succ)
-               Qr.stop()
-             }, 
-             (err) => {console.log(err)})
-        })
+          var obj = {}
+          obj.qrbox = { width: 500, height: 500 }
+          Html5Qrcode.getCameras().then((e) => {
+            console.log(e)
+            Qr.start(e[0].id, obj,
+              (succ) => {
+                inputField.value = succ
+                console.log(succ)
+                Qr.stop()
+              },
+              (err) => { console.log(err) })
+          })
             .catch(e => console.log(e))
-    })
-    .catch(function (err) {
-        console.log(err)
-    });
-   
-}})
+        })
+        .catch(function (err) {
+          console.log(err)
+        });
+
+    }
+  })
 </script>
+
 </html>

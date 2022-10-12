@@ -1,5 +1,10 @@
 .hidden{
-    display :none;
+    display: none;
+}
+
+.hiddengert {
+  display: none;
+  pointer-events: none;
 }
 
 
@@ -82,3 +87,28 @@
   .noFormat:hover { text-decoration: none; }
   
   .noFormat:active { text-decoration: none; }
+
+  .modal_container {
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    pointer-events: auto;
+    z-index: 1;
+
+
+}
+.modal {
+    background-color: #fff;
+    max-height: 80%;
+    max-width: 80%;
+    padding: 2vw 3vh;
+    border-radius: 1vw;
+    text-align: center;
+    
+}

@@ -1,3 +1,4 @@
+<!-- Parkeringsplads: |_|_|_|_|_| -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,35 +10,36 @@
   <link rel="stylesheet" href="../headers/headers.css">
   <title>Forside</title>
 </head>
-<!-- Navigation Menu Start -->
-<header id="headerElement">
-  <nav id="Nav">
-    <script src="https://kit.fontawesome.com/9eacabc789.js" crossorigin="anonymous"></script>
-    <input type="checkbox" id="check">
-    <label for="check">
-      <i class="fas fa-bars" id="btn"></i>
-      <i class="fas fa-times" id="cancel"></i>
-    </label>
-    <div class="sidebar">
-      <header> Navigation </header>
-      <ul>
-        <li> <a class="navButtons" href="../html/Forside.html"> <i class="fa-solid fa-house"></i>Forside</a></li>
-        <li> <a class="navButtons" href="./Kundekartotek.html"> <i
-              class="fa-solid fa-address-card"></i>Kundekartotek</a></li>
-        <li> <a class="navButtons" href="./SalesmanInfo.html"> <i class="fa-solid fa-user"></i>Medarbejder Info</a></li>
-        <li> <a class="navButtons" href="../html/Kalender.html"> <i class="fa-solid fa-calendar-days"></i>Kalender</a></li>
-        <li> <a class="navButtons" href="#"> <i class="fa-solid fa-envelope"></i>(Ikke lavet) Mail</a></li>
-        <li> <a class="navButtons" href="#"> <i class="fa-solid fa-clipboard"></i>(Ikke lavet) Huskeliste</a></li>
-        <li> <a class="navButtons" href="#"> <i class="fa-solid fa-brain"></i>(Ikke forbundet) Tætte kunder</a></li>
-        <li> <a class="navButtons" href="../html/Indstillinger.html"> <i class="fa-solid fa-gear"></i>Indstillinger</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
-</header>
-<!-- Navigation Menu End -->
+
 
 <body>
+  <!-- Navigation Menu Start -->
+  <header id="headerElement">
+    <nav id="Nav">
+      <script src="https://kit.fontawesome.com/9eacabc789.js" crossorigin="anonymous"></script>
+      <input type="checkbox" id="check">
+      <label for="check">
+        <i class="fas fa-bars" id="btn"></i>
+        <i class="fas fa-times" id="cancel"></i>
+      </label>
+      <div class="sidebar">
+        <header> Navigation </header>
+        <ul>
+          <li> <a class="navButtons" href="../html/Forside.html"> <i class="fa-solid fa-house"></i>Forside</a></li>
+          <li> <a class="navButtons" href="./Kundekartotek.html"> <i
+                class="fa-solid fa-address-card"></i>Kundekartotek</a></li>
+          <li> <a class="navButtons" href="./SalesmanInfo.html"> <i class="fa-solid fa-user"></i>Medarbejder Info</a>
+          </li>
+          <li> <a class="navButtons" href="../html/Kalender.html"> <i class="fa-solid fa-calendar-days"></i>Kalender</a>
+          </li>
+          <li> <a class="navButtons" href="#"> <i class="fa-solid fa-brain"></i>(Ikke forbundet) Tætte kunder</a></li>
+          <li> <a class="navButtons" href="../html/Indstillinger.html"> <i
+                class="fa-solid fa-gear"></i>Indstillinger</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <!-- Navigation Menu End -->
 
   <div class="center">
     <h1>To-dos</h1>
@@ -135,12 +137,30 @@
   </div>
   <div class="abs hidden majestic" id="popup">
     <img src="../img/Close.svg" id="close" width="50vw">
-    <h1><a class="noFormat" href="">Salg</a></h1>
+    <h1><a class="noFormat" href="../html/OpretOrdreMedKunde.html">Salg</a></h1>
     <hr>
     <h1><a class="noFormat" href="../html/Kundekartotek.html">Kunde</a></h1>
-      <hr>
-      <h1><a class="noFormat" href="../html/Note_System.html">Note</a></h1>
+    <hr>
+    <h1><a class="noFormat" href="../html/Note_System">Note</a></h1>
+    <hr>
+    <h1><a class="noFormat" id = "toDoOpen">ToDo</a></h1>
   </div>
+
+  <div class="hidden" id="modal_container">
+    <div class="modal">
+      <form id="ToDoForm" action="#" method="get">
+        <label for="ToDoName"> Lav ToDo</label>
+        <input id="ToDoname">
+        <label for="Date">dato</label>
+        <input id="Date" type="date">
+        <button type="submit" id = "lavToDo">lav todo</button>
+      </form>
+      <br> <br>
+      <button id="closeToDo" style="font-size: 3vh; background-color: red">Luk</button>
+    </div>
+  </div>
+
+
 </body>
 <script>
   //Magasin
@@ -168,7 +188,10 @@
   const plusButton = document.getElementById('plusMaster')
   const menu = document.getElementById('popup')
   const closeMenu = document.getElementById('close')
-
+  const createToDo = document.getElementById('lavToDo')
+  const open = document.getElementById('toDoOpen');
+  const modal_container = document.getElementById('modal_container');
+  const close = document.getElementById('closeToDo');
   btn.addEventListener("click", () => {
     hide.classList.toggle('hidden')
     hide.classList.toggle('fly')
@@ -201,6 +224,22 @@
     btn5.classList.toggle('toggleOut')
     btn5.classList.toggle('toggleIn')
   })
+  createToDo.addEventListener('click', (e) => {
+    //ToDo make work and happy not shit like now
+    window.location.href = "/html/Forside.html"
+    console.log("helloblyat")
+  })
+
+
+    open.addEventListener('click', () => {
+      modal_container.classList.toggle('modal_container');
+      modal_container.classList.toggle('hidden');
+    });
+
+    close.addEventListener('click', () => {
+      modal_container.classList.toggle('modal_container'); 
+      modal_container.classList.toggle('hidden');
+    });
 
 
   plusButton.addEventListener('click', () => {
@@ -211,13 +250,20 @@
     menu.classList.toggle('hidden')
     menu.classList.toggle('fly')
   })
+  open.addEventListener('click', () => {
+      modal_container.classList.toggle('hidden');
+    });
 
+  close.addEventListener('click', () => {
+      modal_container.classList.toggle('hidden');
+    });
   function hideElem(id) {
     let parent = document.getElementById(id);
     console.log(parent)
     parent.remove()
 
   }
+
 </script>
 
 </html>
