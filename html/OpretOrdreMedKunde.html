@@ -5,8 +5,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link ref="stylesheet" href="/headers/headers.css">
-  <link rel="stylesheet" href="../headers/headers.css">
+  <link rel="stylesheet" href = "/css/Forside_styles.css">
+  <link rel="stylesheet" href="/headers/headers.css">
   <title>Opret Ordre</title>
 </head>
 
@@ -39,9 +39,10 @@
   </header>
   <!-- Navigation Menu End -->
 
+  <div class = "center" width = "100vw">
   <h1>Magasin</h1>
   <h1>foo@bar.com</h1>
-  <div class="">
+</div>
     <hr>
     <form>
       <h1>Skriv EAN nummer eller scan stregkode</h1>
@@ -50,20 +51,19 @@
       <div class="break"></div>
       <label for="EAN">EAN</label>
       <input id="EAN"></input>
-  </div>
-  <label for="antal">Antal</label>
-  <input id="antal"></input>
-  <div id="products"></div>
-  <button id="tilføjProdukt">Tilføj Produkt</button>
-  <hr>
-  <label for="deliveryDate">Leverings Dato</label>
-  <input id="deliveryDate" type="date">
-  <hr>
-  <button type="submit">Placer Ordre</button>
-  </form>
-  <button> <a href="../html/Forside.html">tilbage</button>
-</body>
-<script src="https://unpkg.com/html5-qrcode@2.0.9/dist/html5-qrcode.min.js"></script>
+      <label for="antal">Antal</label>
+      <input id="antal"></input>
+      <div id="products"></div>
+      <button id="tilføjProdukt">Tilføj Produkt</button>
+      <hr>
+      <label for="deliveryDate">Leverings Dato</label>
+      <input id="deliveryDate" type="date">
+      <hr>
+      <button type="submit">Placer Ordre</button>
+    </form>
+    <button> <a href="../html/Forside.html">tilbage</button>
+    </body>
+    <script src="https://unpkg.com/html5-qrcode@2.0.9/dist/html5-qrcode.min.js"></script>
 <script>
 
   const productsElem = document.getElementById("products")
