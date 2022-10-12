@@ -47,6 +47,7 @@
     <form>
       <h1>Skriv EAN nummer eller scan stregkode</h1>
       <img src="../img/camera.svg" width="70vh" id="cameraInput">
+      <button class ="hidden" id="changeCamera">Change camera</button>
       <div id="qrElem"></div>
       <div class="break"></div>
       <label for="EAN">EAN</label>
@@ -70,6 +71,7 @@
   const addProductButton = document.getElementById("tilføjProdukt");
   const EAN = document.getElementById('EAN')
   const antal = document.getElementById('antal')
+  const changeCam = document.getElementById('changeCamera')
   addProductButton.addEventListener('click', (e) => {
     e.preventDefault();
     productsElem.appendChild(document.createTextNode(`${EAN.value} - ${antal.value} stk`))
@@ -79,12 +81,25 @@
     div.classList.add('break')
     productsElem.appendChild(div)
   })
-
+  changeCam.addEventListener('click', (e) => {
+    e.preventDefault()
+    currCamera += 1;
+    Qr.stop();
+    startScan();
+  })
   //qr functionality
   const scanBtn = document.getElementById("cameraInput")
   const inputField = document.getElementById("EAN")
   var Qr = new Html5Qrcode("qrElem")
+  //camera change functionality
+  let currCamera = 0
   scanBtn.addEventListener('click', () => {
+    changeCam.classList.toggle('hidden')
+    startScan()
+    })
+
+
+  function startScan(){
     if (navigator.mediaDevices.getUserMedia) {
       navigator.mediaDevices.getUserMedia({ video: true })
         .then(function (stream) {
@@ -92,10 +107,14 @@
           obj.qrbox = { width: 500, height: 500 }
           Html5Qrcode.getCameras().then((e) => {
             console.log(e)
-            Qr.start(e[0].id, obj,
+            if(currCamera >= e.length ){
+              currCamera = 0
+            }
+            Qr.start(e[currCamera].id, obj,
               (succ) => {
                 inputField.value = succ
                 console.log(succ)
+                changeCam.classList.toggle('hidden')
                 Qr.stop()
               },
               (err) => { console.log(err) })
@@ -105,9 +124,10 @@
         .catch(function (err) {
           console.log(err)
         });
+  }
+}
+  
 
-    }
-  })
 </script>
 
 </html>
