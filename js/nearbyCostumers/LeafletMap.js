@@ -1,6 +1,7 @@
 import { v4 as uuidv4 } from 'https://jspm.dev/uuid';
 import { UserLocation } from './UserLocation.js';
 import { Waypoint } from './Waypoint.js';
+import { Customer } from './Customer.js';
 
 class LeafletMap {
 
@@ -23,7 +24,15 @@ class LeafletMap {
         this.#addTileLayer();
         this.map.setView([56.20746, 10.48096], 7);
         this.usrLoc = {lat: null, lng: null};
+
+        // Used to group the user location, and to make it easy to remove.
+        // Note: This way of doing it might be an misinterpretation of the documentation of Leaflet.
         this.usrLocLayerGroup = L.layerGroup();
+        this.usrLocLayerGroup.addTo(this.map);
+
+        // Used to group the location of nearby, "Companies."
+        this.corpLayerGroup = L.layerGroup();
+        this.corpLayerGroup.addTo(this.map);
     }
 
 
@@ -92,6 +101,7 @@ class LeafletMap {
 
         el.style.height = '70vh';
         el.style.width = '70vw';
+        el.style.margin = 'auto';
     }
 
 
@@ -124,6 +134,19 @@ class LeafletMap {
     }
 
 
+    /**
+     * Adds a latlng to the UsrLayerGroup.
+     * The input is not type validated. This Methods utilises the Waypoint class.
+     * @param latlng: latlng object {lat: lng:}
+     */
+    #addLatlngToUsrLayerGroup(latlng) {
+        let usrFeature = Waypoint.leafletCircleMarker(latlng);
+
+        this.usrLocLayerGroup.addLayer(usrFeature);
+    }
+
+
+
     /******************
      * Public Methods *
      ******************/
@@ -140,8 +163,10 @@ class LeafletMap {
                 this.usrLoc.lng = curLoc.lng;
 
                 this.map.setView([this.usrLoc.lat, this.usrLoc.lng], 14);
-                this.#addLatlngToMap(curLoc);
+                this.#addLatlngToUsrLayerGroup(curLoc);
                 console.log(curLoc);
+
+                this.addCustomers();
             });
 
     }
@@ -153,6 +178,14 @@ class LeafletMap {
      */
     addUsrLocToMap() {
         this.#addLatlngToMap(this.usrLoc);
+    }
+
+
+    addCustomers() {
+        //Hopefully adding companies.
+        for (let i = 0; i < 25; i++) {
+            this.corpLayerGroup.addLayer(Customer.createCustomer(this.usrLoc, ('company'+i)));
+        }
     }
 }
 

@@ -6,11 +6,11 @@ class Waypoint {
      * convention made by the guys that made the GeoJSON standard.
      * @param latlng: Latlng object. The input is not type-validated.
      */
-    constructor(latlng) {
+    constructor(latlng, propName) {
         this.geoJSON = {
             'type': 'Feature',
             'properties': {
-                'name': 'userLocation'
+                'name': propName
             },
             'geometry': {
                 'type': 'Point',

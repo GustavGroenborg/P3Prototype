@@ -6,5 +6,6 @@ import { LeafletMap } from './LeafletMap.js'
     // Setting the map view to the current user location. As well as adding the user to the map.
     await nearbyCostumersMap.setViewToUsrLoc()
 
+
     console.log('Watch me making JS OO!');
 })();
