@@ -23,6 +23,7 @@ class LeafletMap {
         this.#addTileLayer();
         this.map.setView([56.20746, 10.48096], 7);
         this.usrLoc = {lat: null, lng: null};
+        this.usrLocLayerGroup = L.layerGroup();
     }
 
 

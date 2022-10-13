@@ -26,6 +26,8 @@ class Waypoint {
      * Adds the necessary properties required by Leaflet.
      * These properties make it easier to make it work with GeoJSON waypoints in Leaflet.
      * Note: This private method has been made redundant.
+     * This could be done easier, with just a class extension to the leaflet class, that just fetches the GeoJSON
+     * property from the Leaflet property.
      */
     #addLeafletProperties() {
         this.Leaflet = L.geoJSON(this.geoJSON, {
