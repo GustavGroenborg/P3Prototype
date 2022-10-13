@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kunder i Nærhden</title>
+
+    <link rel="stylesheet" href="../headers/headers.css">
+
+    <!-- Leaflet stylesheet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+          integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+          crossorigin=""/>
+
+    <!-- Leaflet Script -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+            integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+            crossorigin=""></script>
+
+    <!-- Local CSS stylesheet -->
+    <link rel="stylesheet" href="css/nearbyCostumers.css">
+</head>
+<body>
+      <!-- Navigation Menu Start -->
+  <header id="headerElement">
+    <nav id="Nav">
+      <script src="https://kit.fontawesome.com/9eacabc789.js" crossorigin="anonymous"></script>
+      <input type="checkbox" id="check">
+      <label for="check">
+        <i class="fas fa-bars" id="btn"></i>
+        <i class="fas fa-times" id="cancel"></i>
+      </label>
+      <div class="sidebar">
+        <header> Navigation </header>
+        <ul>
+          <li> <a class="navButtons" href="../html/Forside.html"> <i class="fa-solid fa-house"></i>Forside</a></li>
+          <li> <a class="navButtons" href="./Kundekartotek.html"> <i
+                class="fa-solid fa-address-card"></i>Kundekartotek</a></li>
+          <li> <a class="navButtons" href="./SalesmanInfo.html"> <i class="fa-solid fa-user"></i>Medarbejder Info</a>
+          </li>
+          <li> <a class="navButtons" href="../html/Kalender.html"> <i class="fa-solid fa-calendar-days"></i>Kalender</a>
+          </li>
+          <li> <a class="navButtons" href="./nearbyCostumers.html"> <i class="fa-solid fa-brain"></i>(Ikke forbundet) Tætte kunder</a></li>
+          <li> <a class="navButtons" href="../html/Indstillinger.html"> <i
+                class="fa-solid fa-gear"></i>Indstillinger</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+</body>
+
+<script type="module" src="../js/nearbyCostumers/LeafletMap.js"></script>
+<script type="module" src="../js/nearbyCostumers/UserLocation.js"></script>
+<script type="module" src="../js/nearbyCostumers/Waypoint.js"></script>
+<script type="module" src="../js/nearbyCostumers/Program.js"></script>
+</html>
