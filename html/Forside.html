@@ -28,7 +28,7 @@
             <i class="fa-solid fa-house"></i>
             Forside
           </a></li>
-          <li<a class="navButtons" href="./Kundekartotek.html">
+          <li><a class="navButtons" href="./Kundekartotek.html">
             <i class="fa-solid fa-address-card"></i>
             Kundekartotek
           </a></li>
@@ -53,120 +53,123 @@
     </nav>
   </header>
   <!-- Navigation Menu End -->
-  <div class="center">
-    <h2>To-dos</h2>
-    <div class="centerVertical" id="todo1">
-      <img src="../img/checkbox.svg" width="20em" id="todo1Box" onclick="hideElem('todo1')">
-      <h3>Opgave 1</h3>
+  <div class="content-container">
+    <div class="banner">
+      <h1>Dialægt</h1>
     </div>
-    <div class="centerVertical" id="todo2">
-      <img src="../img/checkbox.svg" width="20em" onclick="hideElem('todo2')">
-      <h3>Opgave 2</h3>
+    <div class="center">
+      <h2>To-dos</h2>
+      <div class="centerVertical" id="todo1">
+        <img src="../img/checkbox.svg" width="20em" id="todo1Box" onclick="hideElem('todo1')">
+        <h3>Opgave 1</h3>
+      </div>
+      <div class="centerVertical" id="todo2">
+        <img src="../img/checkbox.svg" width="20em" onclick="hideElem('todo2')">
+        <h3>Opgave 2</h3>
+      </div>
+      <div class="centerVertical" id="todo3">
+        <img src="../img/checkbox.svg" width="20em" id="todo1Box" onclick="hideElem('todo3')" role="button">
+        <h3>Opgave 3</h3>
+      </div>
+      <div class="centerVertical" id="todo4">
+        <img src="../img/checkbox.svg" width="20em" id="todo1Box" onclick="hideElem('todo4')">
+        <h3>Opgave 4</h3>
+      </div>
     </div>
-    <div class="centerVertical" id="todo3">
-      <img src="../img/checkbox.svg" width="20em" id="todo1Box" onclick="hideElem('todo3')" role="button">
-      <h3>Opgave 3</h3>
-    </div>
-    <div class="centerVertical" id="todo4">
-      <img src="../img/checkbox.svg" width="20em" id="todo1Box" onclick="hideElem('todo4')">
-      <h3>Opgave 4</h3>
-    </div>
-  </div>
-  <div class="center" width="100%">
-    <h2>Dagens Kunder</h2>
-    <div class="break"></div>
-    <div class="centerVertical element">
-      <img id="btn1" class="toggleOut" src="../img/right-arrow.png" width="50em">
-      <h3>Magasin</h3>
-    </div>
-    <div class="break"></div>
-    <div id="hideText" class="hidden fly">
-      <div class="center fly">
+    <div class="center" width="100%">
+      <h2>Dagens Kunder</h2>
+      <div class="break"></div>
+      <div class="centerVertical element">
+        <img id="btn1" class="toggleOut" src="../img/right-arrow.png" width="50em">
+        <h3>Magasin</h3>
+      </div>
+      <div class="break"></div>
+      <div id="hideText" class="hidden fly">
+        <div class="center fly">
+          <h4 class="fly">Noter</h4>
+          <ul>
+            <li>Gå ind af dør 3</li>
+            <li>Husk plakater med fisk</li>
+            <li>Parkering er gratis</li>
+          </ul>
+          <button> <a href="../html/OpretOrdreMedKunde.html">Opret ordre</a></button>
+          <button>(Ikke tilføjet) Kommunikation med kunde</button>
+        </div>
+      </div>
+      <div class="break"> </div>
+      <div class="centerVertical element">
+        <img id="btn2" class="toggleOut" src="../img/right-arrow.png" width="50em">
+        <h3>Kop & Kande</h3>
+      </div>
+      <div class="break"> </div>
+      <div id="hideElem2" class="hidden fly">
         <h4 class="fly">Noter</h4>
-        <ul>
-          <li>Gå ind af dør 3</li>
-          <li>Husk plakater med fisk</li>
-          <li>Parkering er gratis</li>
-        </ul>
-        <button> <a href="../html/OpretOrdreMedKunde.html">Opret ordre</a></button>
+        <button>Opret ordre</button>
+        <div class="break"> </div>
+        <button>(Ikke tilføjet) Kommunikation med kunde</button>
+      </div>
+      <div class="centerVertical element">
+        <img id="btn3" class="toggleOut" src="../img/right-arrow.png" width="50em">
+        <h3>Spar</h3>
+      </div>
+      <div class="break"> </div>
+      <div id="hideElem3" class="hidden fly">
+        <h4 class="fly">Noter</h4>
+        <button>Opret ordre</button>
+        <div class="break"> </div>
+        <button>(Ikke tilføjet) Kommunikation med kunde</button>
+      </div>
+      <div class="centerVertical element">
+        <img id="btn4" class="toggleOut" src="../img/right-arrow.png" width="50em">
+        <h3>Salling</h3>
+      </div>
+      <div class="break"> </div>
+      <div id="hideElem4" class="hidden fly">
+        <h4 class="fly">Noter</h4>
+        <button>Opret ordre</button>
+        <div class="break"> </div>
+        <button>(Ikke tilføjet) Kommunikation med kunde</button>
+      </div>
+      <div class="centerVertical element">
+        <img id="btn5" class="toggleOut" src="../img/right-arrow.png" width="50em">
+        <h3>Fakta</h3>
+      </div>
+      <div class="break"> </div>
+      <div id="hideElem5" class="hidden fly">
+        <h4 class="fly">Noter</h4>
+        <button>Opret ordre</button>
+        <div class="break"> </div>
         <button>(Ikke tilføjet) Kommunikation med kunde</button>
       </div>
     </div>
-    <div class="break"> </div>
-    <div class="centerVertical element">
-      <img id="btn2" class="toggleOut" src="../img/right-arrow.png" width="50em">
-      <h3>Kop & Kande</h3>
+    <div>
+      <img src="../img/plus.svg" width="80vw" class="abs" id="plusMaster">
     </div>
-    <div class="break"> </div>
-    <div id="hideElem2" class="hidden fly">
-      <h4 class="fly">Noter</h4>
-      <button>Opret ordre</button>
-      <div class="break"> </div>
-      <button>(Ikke tilføjet) Kommunikation med kunde</button>
+    <div class="abs hidden majestic" id="popup">
+      <img src="../img/Close.svg" id="close" width="50vw">
+      <h2><a class="noFormat" href="../html/OpretOrdreMedKunde.html">Salg</a></h2>
+      <hr>
+      <h2><a class="noFormat" href="../html/Kundekartotek.html">Kunde</a></h2>
+      <hr>
+      <h2><a class="noFormat" href="../html/Note_System.html">Note</a></h2>
+      <hr>
+      <h2><a class="noFormat" id = "toDoOpen">ToDo</a></h2>
     </div>
-    <div class="centerVertical element">
-      <img id="btn3" class="toggleOut" src="../img/right-arrow.png" width="50em">
-      <h3>Spar</h3>
-    </div>
-    <div class="break"> </div>
-    <div id="hideElem3" class="hidden fly">
-      <h4 class="fly">Noter</h4>
-      <button>Opret ordre</button>
-      <div class="break"> </div>
-      <button>(Ikke tilføjet) Kommunikation med kunde</button>
-    </div>
-    <div class="centerVertical element">
-      <img id="btn4" class="toggleOut" src="../img/right-arrow.png" width="50em">
-      <h3>Salling</h3>
-    </div>
-    <div class="break"> </div>
-    <div id="hideElem4" class="hidden fly">
-      <h4 class="fly">Noter</h4>
-      <button>Opret ordre</button>
-      <div class="break"> </div>
-      <button>(Ikke tilføjet) Kommunikation med kunde</button>
-    </div>
-    <div class="centerVertical element">
-      <img id="btn5" class="toggleOut" src="../img/right-arrow.png" width="50em">
-      <h3>Fakta</h3>
-    </div>
-    <div class="break"> </div>
-    <div id="hideElem5" class="hidden fly">
-      <h4 class="fly">Noter</h4>
-      <button>Opret ordre</button>
-      <div class="break"> </div>
-      <button>(Ikke tilføjet) Kommunikation med kunde</button>
-    </div>
-  </div>
-  <div>
-    <img src="../img/plus.svg" width="80vw" class="abs" id="plusMaster">
-  </div>
-  <div class="abs hidden majestic" id="popup">
-    <img src="../img/Close.svg" id="close" width="50vw">
-    <h2><a class="noFormat" href="../html/OpretOrdreMedKunde.html">Salg</a></h2>
-    <hr>
-    <h2><a class="noFormat" href="../html/Kundekartotek.html">Kunde</a></h2>
-    <hr>
-    <h2><a class="noFormat" href="../html/Note_System.html">Note</a></h2>
-    <hr>
-    <h2><a class="noFormat" id = "toDoOpen">ToDo</a></h2>
-  </div>
 
-  <div class="hidden" id="modal_container">
-    <div class="modal">
-      <form id="ToDoForm" action="#" method="get">
-        <label for="ToDoName"> Lav ToDo</label>
-        <input id="ToDoname">
-        <label for="Date">dato</label>
-        <input id="Date" type="date">
-        <button type="submit" id = "lavToDo">lav todo</button>
-      </form>
-      <br> <br>
-      <button id="closeToDo" style="font-size: 3vh; background-color: red">Luk</button>
+    <div class="hidden" id="modal_container">
+      <div class="modal">
+        <form id="ToDoForm" action="#" method="get">
+          <label for="ToDoName"> Lav ToDo</label>
+          <input id="ToDoname">
+          <label for="Date">dato</label>
+          <input id="Date" type="date">
+          <button type="submit" id = "lavToDo">lav todo</button>
+        </form>
+        <br> <br>
+        <button id="closeToDo" style="font-size: 3vh; background-color: red">Luk</button>
+      </div>
     </div>
   </div>
-
-
 </body>
 <script>
   //Magasin

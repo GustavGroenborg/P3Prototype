@@ -1,7 +1,10 @@
 .banner {
-    width: 50%;
-    margin: auto;
-    text-align: center;
-    border: 2px solid black;
-  }
-  
+  width: 50%;
+  margin: auto;
+  text-align: center;
+  border: 2px solid black;
+}
+.content-container {
+  max-width: 1024px;
+  margin: auto;
+}

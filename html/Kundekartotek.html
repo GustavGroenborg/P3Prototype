@@ -27,7 +27,7 @@
             <i class="fa-solid fa-house"></i>
             Forside
           </a></li>
-          <li<a class="navButtons" href="./Kundekartotek.html">
+          <li><a class="navButtons" href="./Kundekartotek.html">
             <i class="fa-solid fa-address-card"></i>
             Kundekartotek
           </a></li>
@@ -52,32 +52,35 @@
     </nav>
   </header>
   <!-- Navigation Menu End -->
-  <h1 id="Titlen"> Kundekartotek </h1>
-  <div id="KundeWrapper">
-    <div class="KundeDiv" id="Kunde">
-      <img id="Kunde1" class="EnkeltKunde" src="../img/MagasinLogo.png" alt="Magasin Logo">
+  <div class="content-container">
+    <div class="banner">
+      <h1>Kundekartotek</h1>
     </div>
-    <div id="KundeDiv">
-      <img id="Kunde2" class="EnkeltKunde" src="../img/BilkaLogo.png" alt="Bilka Logo">
-    </div>
-    <div class="KundeDiv" id="Kunde">
-      <img id="Kunde1" class="EnkeltKunde" src="../img/MagasinLogo.png" alt="Magasin Logo">
-    </div>
-    <div id="KundeDiv">
-      <img id="Kunde2" class="EnkeltKunde" src="../img/BilkaLogo.png" alt="Bilka Logo">
-    </div>
-  </div>
-  <button id="CreateNewButton"> Tilføj ny kunde </button>
-  <div class="modal_container hidden" id="modal_container">
-    <div class="modal">
-      <div id="iFrameDiv">
-        <iframe src="https://forms.monday.com/forms/embed/eeed5c6d31ce6a028495ef8ea6f8e585?r=use1" width="400"
-          height="500" style="border: 0; box-shadow: 5px 5px 56px 0px rgba(0,0,0,0.25);"></iframe>
+    <div id="KundeWrapper">
+      <div class="KundeDiv" id="Kunde">
+        <img id="Kunde1" class="EnkeltKunde" src="../img/MagasinLogo.png" alt="Magasin Logo">
       </div>
-      <br> <br>
-      <button id="close" style="font-size: 3vh; background-color: red">Luk</button>
+      <div id="KundeDiv">
+        <img id="Kunde2" class="EnkeltKunde" src="../img/BilkaLogo.png" alt="Bilka Logo">
+      </div>
+      <div class="KundeDiv" id="Kunde">
+        <img id="Kunde1" class="EnkeltKunde" src="../img/MagasinLogo.png" alt="Magasin Logo">
+      </div>
+      <div id="KundeDiv">
+        <img id="Kunde2" class="EnkeltKunde" src="../img/BilkaLogo.png" alt="Bilka Logo">
+      </div>
     </div>
-  </div>
+    <button id="CreateNewButton"> Tilføj ny kunde </button>
+    <div class="modal_container hidden" id="modal_container">
+      <div class="modal">
+        <div id="iFrameDiv">
+          <iframe src="https://forms.monday.com/forms/embed/eeed5c6d31ce6a028495ef8ea6f8e585?r=use1" width="400"
+            height="500" style="border: 0; box-shadow: 5px 5px 56px 0px rgba(0,0,0,0.25);"></iframe>
+        </div>
+        <br> <br>
+        <button id="close" style="font-size: 3vh; background-color: red">Luk</button>
+      </div>
+    </div>
   <script>
     const open = document.getElementById('CreateNewButton');
     const modal_container = document.getElementById('modal_container');
@@ -91,5 +94,6 @@
       modal_container.classList.toggle('hidden');
     });
   </script>
+  </div>
 </body>
 </html>
