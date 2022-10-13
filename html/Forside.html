@@ -28,11 +28,13 @@
           <li> <a class="navButtons" href="../html/Forside.html"> <i class="fa-solid fa-house"></i>Forside</a></li>
           <li> <a class="navButtons" href="./Kundekartotek.html"> <i
                 class="fa-solid fa-address-card"></i>Kundekartotek</a></li>
-          <li> <a class="navButtons" href="./SalesmanInfo.html"> <i class="fa-solid fa-user"></i>Medarbejder Info</a>
+          <li> <a class="navButtons" href="./Medarbejderinfo.html"> <i class="fa-solid fa-user"></i>Medarbejder Info</a>
           </li>
+          <li> <a class="navButtons" href="./SalesmanInfo.html"> <i class="fa-solid fa-user"></i>Sælger Data</a> </li>
           <li> <a class="navButtons" href="../html/Kalender.html"> <i class="fa-solid fa-calendar-days"></i>Kalender</a>
           </li>
-          <li> <a class="navButtons" href="./nearbyCostumers.html"> <i class="fa-solid fa-brain"></i>(Ikke forbundet) Tætte kunder</a></li>
+          <li> <a class="navButtons" href="./nearbyCostumers.html"> <i class="fa-solid fa-brain"></i>(Ikke forbundet)
+              Tætte kunder</a></li>
           <li> <a class="navButtons" href="../html/Indstillinger.html"> <i
                 class="fa-solid fa-gear"></i>Indstillinger</a></li>
         </ul>
@@ -143,7 +145,7 @@
     <hr>
     <h1><a class="noFormat" href="../html/Note_System.html">Note</a></h1>
     <hr>
-    <h1><a class="noFormat" id = "toDoOpen">ToDo</a></h1>
+    <h1><a class="noFormat" id="toDoOpen">ToDo</a></h1>
   </div>
 
   <div class="hidden" id="modal_container">
@@ -153,7 +155,7 @@
         <input id="ToDoname">
         <label for="Date">dato</label>
         <input id="Date" type="date">
-        <button type="submit" id = "lavToDo">lav todo</button>
+        <button type="submit" id="lavToDo">lav todo</button>
       </form>
       <br> <br>
       <button id="closeToDo" style="font-size: 3vh; background-color: red">Luk</button>
@@ -231,15 +233,15 @@
   })
 
 
-    open.addEventListener('click', () => {
-      modal_container.classList.toggle('modal_container');
-      modal_container.classList.toggle('hidden');
-    });
+  open.addEventListener('click', () => {
+    modal_container.classList.toggle('modal_container');
+    modal_container.classList.toggle('hidden');
+  });
 
-    close.addEventListener('click', () => {
-      modal_container.classList.toggle('modal_container'); 
-      modal_container.classList.toggle('hidden');
-    });
+  close.addEventListener('click', () => {
+    modal_container.classList.toggle('modal_container');
+    modal_container.classList.toggle('hidden');
+  });
 
 
   plusButton.addEventListener('click', () => {
@@ -251,12 +253,12 @@
     menu.classList.toggle('fly')
   })
   open.addEventListener('click', () => {
-      modal_container.classList.toggle('hidden');
-    });
+    modal_container.classList.toggle('hidden');
+  });
 
   close.addEventListener('click', () => {
-      modal_container.classList.toggle('hidden');
-    });
+    modal_container.classList.toggle('hidden');
+  });
   function hideElem(id) {
     let parent = document.getElementById(id);
     console.log(parent)
