@@ -1,15 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
+  <!-- Shared META -->
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../components/headers/headers.css">
+  <!-- Unique META -->
   <link rel="stylesheet" href="../css/Kundekartotek.css">
-  <link rel="stylesheet" href="../headers/headers.css">
   <title>Kunder</title>
 </head>
-
 <body>
   <!-- Navigation Menu Start -->
   <header id="headerElement">
@@ -38,7 +37,6 @@
     </nav>
   </header>
   <!-- Navigation Menu End -->
-
   <h1 id="Titlen"> Kundekartotek </h1>
   <div id="KundeWrapper">
     <div class="KundeDiv" id="Kunde">
@@ -54,10 +52,7 @@
       <img id="Kunde2" class="EnkeltKunde" src="../img/BilkaLogo.png" alt="Bilka Logo">
     </div>
   </div>
-
   <button id="CreateNewButton"> Tilføj ny kunde </button>
-
-
   <div class="modal_container hidden" id="modal_container">
     <div class="modal">
       <div id="iFrameDiv">
@@ -68,7 +63,6 @@
       <button id="close" style="font-size: 3vh; background-color: red">Luk</button>
     </div>
   </div>
-
   <script>
     const open = document.getElementById('CreateNewButton');
     const modal_container = document.getElementById('modal_container');
@@ -81,12 +75,6 @@
     close.addEventListener('click', () => {
       modal_container.classList.toggle('hidden');
     });
-
-
-
   </script>
-
-
 </body>
-
 </html>

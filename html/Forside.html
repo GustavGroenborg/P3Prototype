@@ -1,17 +1,15 @@
 <!-- Parkeringsplads: |_|_|_|_|_| -->
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
+  <!-- Shared META -->
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../components/headers/headers.css">
+  <!-- Unique META -->
   <link rel="stylesheet" href="../css/Forside_styles.css">
-  <link rel="stylesheet" href="../headers/headers.css">
   <title>Forside</title>
 </head>
-
-
 <body>
   <!-- Navigation Menu Start -->
   <header id="headerElement">
@@ -40,9 +38,8 @@
     </nav>
   </header>
   <!-- Navigation Menu End -->
-
   <div class="center">
-    <h1>To-dos</h1>
+    <h2>To-dos</h2>
     <div class="centerVertical" id="todo1">
       <img src="../img/checkbox.svg" width="20em" id="todo1Box" onclick="hideElem('todo1')">
       <h3>Opgave 1</h3>
@@ -59,20 +56,18 @@
       <img src="../img/checkbox.svg" width="20em" id="todo1Box" onclick="hideElem('todo4')">
       <h3>Opgave 4</h3>
     </div>
-
   </div>
   <div class="center" width="100%">
-    <h1>Dagens Kunder</h1>
+    <h2>Dagens Kunder</h2>
     <div class="break"></div>
     <div class="centerVertical element">
-
       <img id="btn1" class="toggleOut" src="../img/right-arrow.png" width="50em">
-      <h1>Magasin</h1>
+      <h3>Magasin</h3>
     </div>
     <div class="break"></div>
     <div id="hideText" class="hidden fly">
       <div class="center fly">
-        <h1 class="fly">Noter</h1>
+        <h4 class="fly">Noter</h4>
         <ul>
           <li>Gå ind af dør 3</li>
           <li>Husk plakater med fisk</li>
@@ -85,48 +80,44 @@
     <div class="break"> </div>
     <div class="centerVertical element">
       <img id="btn2" class="toggleOut" src="../img/right-arrow.png" width="50em">
-      <h1>Kop & Kande</h1>
+      <h3>Kop & Kande</h3>
     </div>
     <div class="break"> </div>
     <div id="hideElem2" class="hidden fly">
-      <h1 class="fly">Noter</h1>
-
+      <h4 class="fly">Noter</h4>
       <button>Opret ordre</button>
       <div class="break"> </div>
       <button>(Ikke tilføjet) Kommunikation med kunde</button>
     </div>
     <div class="centerVertical element">
       <img id="btn3" class="toggleOut" src="../img/right-arrow.png" width="50em">
-      <h1>Spar</h1>
+      <h3>Spar</h3>
     </div>
     <div class="break"> </div>
     <div id="hideElem3" class="hidden fly">
-      <h1 class="fly">Noter</h1>
-
+      <h4 class="fly">Noter</h4>
       <button>Opret ordre</button>
       <div class="break"> </div>
       <button>(Ikke tilføjet) Kommunikation med kunde</button>
     </div>
     <div class="centerVertical element">
       <img id="btn4" class="toggleOut" src="../img/right-arrow.png" width="50em">
-      <h1>Salling</h1>
+      <h3>Salling</h3>
     </div>
     <div class="break"> </div>
     <div id="hideElem4" class="hidden fly">
-      <h1 class="fly">Noter</h1>
-
+      <h4 class="fly">Noter</h4>
       <button>Opret ordre</button>
       <div class="break"> </div>
       <button>(Ikke tilføjet) Kommunikation med kunde</button>
     </div>
     <div class="centerVertical element">
       <img id="btn5" class="toggleOut" src="../img/right-arrow.png" width="50em">
-      <h1>Fakta</h1>
+      <h3>Fakta</h3>
     </div>
     <div class="break"> </div>
     <div id="hideElem5" class="hidden fly">
-      <h1 class="fly">Noter</h1>
-
+      <h4 class="fly">Noter</h4>
       <button>Opret ordre</button>
       <div class="break"> </div>
       <button>(Ikke tilføjet) Kommunikation med kunde</button>
@@ -137,13 +128,13 @@
   </div>
   <div class="abs hidden majestic" id="popup">
     <img src="../img/Close.svg" id="close" width="50vw">
-    <h1><a class="noFormat" href="../html/OpretOrdreMedKunde.html">Salg</a></h1>
+    <h2><a class="noFormat" href="../html/OpretOrdreMedKunde.html">Salg</a></h2>
     <hr>
-    <h1><a class="noFormat" href="../html/Kundekartotek.html">Kunde</a></h1>
+    <h2><a class="noFormat" href="../html/Kundekartotek.html">Kunde</a></h2>
     <hr>
-    <h1><a class="noFormat" href="../html/Note_System.html">Note</a></h1>
+    <h2><a class="noFormat" href="../html/Note_System.html">Note</a></h2>
     <hr>
-    <h1><a class="noFormat" id = "toDoOpen">ToDo</a></h1>
+    <h2><a class="noFormat" id = "toDoOpen">ToDo</a></h2>
   </div>
 
   <div class="hidden" id="modal_container">

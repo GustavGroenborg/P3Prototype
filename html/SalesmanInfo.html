@@ -1,19 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+  <!-- Shared META -->
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../components/headers/headers.css">
+  <!-- Unique META -->
   <link rel="stylesheet" href="../css/SalesmanInfo_styles.css">
-  <link rel="stylesheet" href="../headers/headers.css">
   <title>Sælger info</title>
 </head>
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
-
-
-
 <body>
   <!-- Navigation Menu Start -->
   <header id="headerElement">
@@ -42,9 +38,7 @@
     </nav>
   </header>
   <!-- Navigation Menu End -->
-
   <h1 class="banner">Sælger info</h1>
-
   <div style="text-align:center">
     <select name="salesman" id="salesman">
       <option value="" disabled selected hidden>Vælg en sælger</option>
@@ -54,7 +48,6 @@
       <option value="Louise Frederiksen">Louise Frederiksen</option>
     </select>
   </div>
-
   <div id="overview">
     <h2>Salg generelt</h2>
     <canvas id="pieGeneral"></canvas>
@@ -63,7 +56,6 @@
     <h2 id="saleHeadline"></h2>
     <canvas id="salesmanChart"></canvas>
   </div>
-
   <script>
     var xValues = ["Magasin", "Salling", "Kop & Kande", "Fakta", "XL Byg"];
     var yValues = [100, 120, 30, 10, 50];
@@ -74,7 +66,6 @@
       "#e8c3b9",
       "#1e7145"
     ];
-
     new Chart("pieGeneral", {
       type: "pie",
       data: {
@@ -92,12 +83,10 @@
       }
     });
   </script>
-
   <script>
     var xValues = ["Magasin", "Salling", "Kop & Kande", "Fakta", "XL Byg"];
     var yValues = [100, 120, 30, 10, 50];
     var barColors = ["#b91d47", "#00aba9", "#2b5797", "#e8c3b9", "#1e7145"];
-
     new Chart("barGeneral", {
       type: "bar",
       data: {
@@ -116,15 +105,12 @@
       }
     });
   </script>
-
   <script>
     let select = document.querySelector("#salesman");
-
     select.addEventListener("change", (event) => {
       let salesman = event.target.value;
       displayGraph(salesman);
     });
-
     function displayGraph(salesman) {
       let saleData = [];
       saleData["Anders Davidsen"] = {
@@ -147,13 +133,10 @@
         sales: [200, 142, 165],
         colors: ["#b91d47", "#00aba9", "#2b5797"]
       };
-
       let overview = document.querySelector("#overview");
       let saleHeadline = document.querySelector("#saleHeadline");
       let chart = document.querySelector("#salesmanChart");
-
       saleHeadline.textContent = `Salgsoversigt for ${salesman}`;
-
       new Chart("salesmanChart", {
         type: "pie",
         data: {
@@ -173,5 +156,4 @@
     }
   </script>
 </body>
-
 </html>

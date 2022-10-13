@@ -1,15 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
+  <!-- Shared META -->
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../components/headers/headers.css">
+  <!-- Unique META -->
   <link rel="stylesheet" href="../css/Indstillinger_styles.css">
-  <link rel="stylesheet" href="../headers/headers.css">
   <title>Indstillinger</title>
 </head>
-
 <body>
   <!-- Navigation Menu Start -->
   <header id="headerElement">
@@ -38,18 +37,15 @@
     </nav>
   </header>
   <!-- Navigation Menu End -->
-
   <div>
     <div class="banner">
       <h1>Indstillinger</h1>
     </div>
-
     <table style="width:60%; font-size:20px;">
       <tr>
         <th></th>
         <th></th>
       </tr>
-
       <tr>
         <td>Dark mode</td>
         <td>
@@ -59,7 +55,6 @@
           </label>
         </td>
       </tr>
-
       <tr>
         <td>Andre indstillinger</td>
         <td>
@@ -69,7 +64,6 @@
           </label>
         </td>
       </tr>
-
       <tr>
         <td>Andre indstillinger</td>
         <td>
@@ -80,10 +74,7 @@
         </td>
       </tr>
     </table>
-
   </div>
-
-
   <script>
     let checkbox = document.querySelector("#darkModeCheckBox").childNodes[1];
     checkbox.addEventListener("change", darkMode);
@@ -99,17 +90,9 @@
       }
     }
   </script>
-
-
-
-
-
-
-
   <!-- <label class="switch">
     <input type="checkbox" checked>
     <span class="slider round"></span>
   </label> -->
 </body>
-
 </html>
