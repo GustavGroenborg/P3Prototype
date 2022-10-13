@@ -90,21 +90,7 @@
       </tr>
     </table>
   </div>
-  <script>
-    let checkbox = document.querySelector("#darkModeCheckBox").childNodes[1];
-    checkbox.addEventListener("change", darkMode);
-
-    function darkMode() {
-      if (checkbox.checked) {
-        document.body.style.backgroundColor = "black";
-        document.body.style.color = "white";
-      }
-      else {
-        document.body.style.backgroundColor = "white";
-        document.body.style.color = "black";
-      }
-    }
-  </script>
+  <script src="../js/Settings.js"></script>
   <!-- <label class="switch">
     <input type="checkbox" checked>
     <span class="slider round"></span>
